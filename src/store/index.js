@@ -12,7 +12,20 @@ export default new Vuex.Store({
     ]
   },
   mutations: {
-
+    TOGGLE_CHECKBOX(state, {id, checked}) {
+      state.todos.some(todo => {
+        if (todo.id === id) {
+          todo.checked = checked;
+          return true;
+        }
+        return false;
+      });
+    },
+    DELETE_TODO(state, id) {
+      state.todos = state.todos.filter(todo => {
+        return todo.id !==id;
+      })
+    }
   },
   actions: {
 
