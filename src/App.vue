@@ -8,18 +8,7 @@
       placeholder="할 일을 추가해주세요"
     >
 
-    <div class="todo-list">
-      <li>
-        <div class="view">
-          <input
-            class="toggle"
-            type="checkbox"
-          >
-          <label class="label">new todo 1</label>
-          <button class="destroy"></button>
-        </div>
-      </li>
-    </div>
+    <TodoList/>
 
     <div class="count-container">
       <span class="todo-count">
@@ -43,12 +32,12 @@
 </template>
 
 <script>
-
+import TodoList from './components/TodoList';
 
 export default {
   name: 'App',
   components: {
-
+    TodoList
   }
 }
 </script>
