@@ -3,10 +3,7 @@
 
     <h1>TODOS</h1>
 
-    <input
-      class="new-todo"
-      placeholder="할 일을 추가해주세요"
-    >
+    <TodoInput/>
 
     <TodoList/>
 
@@ -32,11 +29,13 @@
 </template>
 
 <script>
+  import TodoInput from './components/TodoInput';
 import TodoList from './components/TodoList';
 
 export default {
   name: 'App',
   components: {
+    TodoInput,
     TodoList
   }
 }
