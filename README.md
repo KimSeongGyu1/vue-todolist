@@ -1,4 +1,24 @@
-# vue-todolist
+# a
 
-- 닉네임으로 브랜치 새로 파서 작업
-- 7월 6일까지 PR 보내기
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
