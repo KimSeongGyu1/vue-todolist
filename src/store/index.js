@@ -34,6 +34,8 @@ export default new Vuex.Store({
 
   },
   getters: {
-
+    numberOfAll: state => {
+      return state.todos.length;
+    }
   }
 })

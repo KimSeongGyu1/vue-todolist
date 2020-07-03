@@ -1,42 +1,23 @@
 <template>
   <div class="todoapp">
-
     <h1>TODOS</h1>
-
     <TodoInput/>
-
     <TodoList/>
-
-    <div class="count-container">
-      <span class="todo-count">
-        1 개
-      </span>
-
-      <ul class="filters">
-        <li>
-          <a>전체보기</a>
-        </li>
-        <li>
-          <a>해야할 일</a>
-        </li>
-        <li>
-          <a>완료한 일</a>
-        </li>
-      </ul>
-    </div>
-
+    <TodoStatus/>
   </div>
 </template>
 
 <script>
-  import TodoInput from './components/TodoInput';
+import TodoInput from './components/TodoInput';
 import TodoList from './components/TodoList';
+import TodoStatus from './components/TodoStatus';
 
 export default {
   name: 'App',
   components: {
     TodoInput,
-    TodoList
+    TodoList,
+    TodoStatus
   }
 }
 </script>
