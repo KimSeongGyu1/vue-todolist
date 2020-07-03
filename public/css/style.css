@@ -297,6 +297,7 @@ body {
 
 .filters li a.selected {
     border-color: rgba(175, 47, 47, 0.2);
+    background-color: rgba(175, 47, 47, 0.2);
 }
 
 .clear-completed, html .clear-completed:active {

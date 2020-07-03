@@ -10,7 +10,7 @@
   export default {
     computed: {
       count() {
-        return this.$store.getters.numberOfAll;
+        return this.$store.getters.filteredTodos.length;
       }
     }
   }

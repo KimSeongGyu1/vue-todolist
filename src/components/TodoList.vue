@@ -9,7 +9,6 @@
 </template>
 
 <script>
-	import { mapState } from 'vuex';
 	import Todo from '@/components/Todo.vue';
 
   export default {
@@ -17,9 +16,9 @@
       Todo
     },
 		computed: {
-      ...mapState([
-          'todos'
-      ])
+			todos() {
+				return this.$store.getters.filteredTodos;
+			}
 		}
   }
 </script>

@@ -9,7 +9,8 @@ export default new Vuex.Store({
       {id:1, text: 'first initial todo', checked: false},
       {id:2, text: 'second initial todo', checked: false},
       {id:3, text: 'third initial todo', checked: false}
-    ]
+    ],
+    show: 'all'
   },
   mutations: {
     TOGGLE_CHECKBOX(state, {id, checked}) {
@@ -28,14 +29,32 @@ export default new Vuex.Store({
     },
     ADD_TODO(state, todo) {
       state.todos.push(todo);
+    },
+    SHOW_ALL(state) {
+      state.show = 'all';
+    },
+    SHOW_TODOS(state) {
+      state.show = 'todos';
+    },
+    SHOW_COMPLETED(state) {
+      state.show = 'completed';
     }
   },
   actions: {
 
   },
   getters: {
-    numberOfAll: state => {
-      return state.todos.length;
+    filteredTodos: state => {
+      if (state.show === 'all') {
+        return state.todos;
+      } else if (state.show === 'todos') {
+        return state.todos.filter(todo => todo.checked === false);
+      } else if (state.show === 'completed') {
+        return state.todos.filter(todo => todo.checked === true);
+      }
+       else {
+        return [];
+      }
     }
   }
 })
